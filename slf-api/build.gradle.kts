@@ -49,7 +49,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-mavenPublishing {
+/*mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     configure(
         AndroidSingleVariantLibrary(
@@ -62,7 +62,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-api", "1.0.0-alpha")
+    coordinates("io.github.zhangwenxue", "slf-api", "1.0.1-alpha")
 
     pom {
         name.set("Slf Api")
@@ -90,4 +90,4 @@ mavenPublishing {
         }
     }
     signAllPublications()
-}
+}*/
