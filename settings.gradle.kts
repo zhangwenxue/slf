@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "slf"
 include(":app")
-include(":library")
+include(":slf-api")
+include(":slf-shipbook")
