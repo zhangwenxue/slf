@@ -13,7 +13,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 23
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -66,7 +66,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-shipbook", "1.0.0-alpha")
+    coordinates("io.github.zhangwenxue", "slf-shipbook", "1.0.0-alpha1")
 
     pom {
         name.set("Slf-ShipBook")

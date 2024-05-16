@@ -13,7 +13,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 23
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -49,7 +49,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-/*mavenPublishing {
+mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     configure(
         AndroidSingleVariantLibrary(
@@ -62,7 +62,7 @@ dependencies {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-api", "1.0.1-alpha")
+    coordinates("io.github.zhangwenxue", "slf-api", "1.0.1-alpha1")
 
     pom {
         name.set("Slf Api")
@@ -90,4 +90,4 @@ dependencies {
         }
     }
     signAllPublications()
-}*/
+}
