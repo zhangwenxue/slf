@@ -14,10 +14,11 @@ class MainActivity : AppCompatActivity() {
             "663869f296288110dd396e8b",
             "37d9b05d5ca306712c8f1b10d0c71d18"
         )
-        LogFacade.init(this)
+        L.installPubCloudMixPanel("9b0ffe18f0ff60491f540a6f9292c365")
+        L.init(this)
 
-        LogFacade.i("Test log from opensource!")
-        LogFacade.e("Test log from opensource!22")
+        L.i("Test log from opensource!")
+        L.e("Test log from opensource!22")
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

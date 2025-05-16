@@ -1,8 +1,8 @@
 [versions]
-agp = "8.4.0"
-autoService = "1.0.1"
+agp = "8.10.0"
+autoService = "1.1.1"
 autoServiceAnnotations = "1.1.1"
-kotlin = "1.9.0"
+kotlin = "2.0.21"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -11,8 +11,9 @@ appcompat = "1.6.1"
 material = "1.12.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
+mixpanelAndroid = "8.1.0"
 shipbooksdk = "1.8.0"
-slfApi = "1.0.1-alpha1"
+slfApi = "1.0.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,6 +26,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+mixpanel-android = { module = "com.mixpanel.android:mixpanel-android", version.ref = "mixpanelAndroid" }
 shipbooksdk = { module = "io.shipbook:shipbooksdk", version.ref = "shipbooksdk" }
 slf-api = { module = "io.github.zhangwenxue:slf-api", version.ref = "slfApi" }
 

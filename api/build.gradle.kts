@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
-    id("com.vanniktech.maven.publish") version "0.28.0"
+    id("com.vanniktech.maven.publish") version "0.32.0"
 }
 
 android {
@@ -62,7 +62,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-api", "1.0.1-alpha1")
+    coordinates("io.github.zhangwenxue", "slf-api", "1.0.2")
 
     pom {
         name.set("Slf Api")

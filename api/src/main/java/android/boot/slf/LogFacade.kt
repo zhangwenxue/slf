@@ -154,8 +154,119 @@ object LogFacade : LogService {
 
     var pubCloudShipBookCfg: PubCloudShipBookCfg? = null
 
+    var pubCloudMixPanelCfg: PubCloudMixpanelCfg? = null
+
     fun installPubCloudShipBook(appId: String, appKey: String) {
         pubCloudShipBookCfg = PubCloudShipBookCfg(appId, appKey)
+    }
+
+    fun installPubCloudMixPanel(token: String) {
+        pubCloudMixPanelCfg = PubCloudMixpanelCfg(token)
+    }
+
+    override var fixedPrefixProvider: () -> String
+        get() = logService.fixedPrefixProvider
+        set(value) {
+            logService.fixedPrefixProvider = value
+        }
+
+    override fun init(context: Context) {
+        logService.init(context)
+    }
+
+    override fun registerUser(
+        userId: String,
+        userName: String,
+        fullName: String,
+        email: String,
+        phone: String,
+        additionalInfo: Map<String, String>
+    ) {
+        logService.registerUser(userId, userName, fullName, email, phone, additionalInfo)
+    }
+
+    override fun tag(tag: String?, append: Boolean, separator: String) =
+        logService.tag(tag, append, separator)
+
+    override fun prefix(prefix: String?, append: Boolean, separator: String) =
+        logService.prefix(prefix, append, separator)
+
+    override fun suffix(suffix: String?, append: Boolean, separator: String) =
+        logService.suffix(suffix, append, separator)
+
+    override fun v(tag: String?, log: String?) {
+        logService.v(tag, log)
+    }
+
+    override fun v(log: String?) {
+        logService.v(log)
+    }
+
+    override fun d(tag: String?, log: String?) {
+        logService.d(tag, log)
+    }
+
+    override fun d(log: String?) {
+        logService.d(log)
+    }
+
+    override fun i(tag: String?, log: String?) {
+        logService.i(tag, log)
+    }
+
+    override fun i(log: String?) {
+        logService.i(log)
+    }
+
+    override fun w(tag: String?, log: String?) {
+        logService.w(tag, log)
+    }
+
+    override fun w(tag: String?, log: String?, throwable: Throwable?) {
+        logService.w(tag, log, throwable)
+    }
+
+    override fun w(log: String?) {
+        logService.w(log)
+    }
+
+    override fun w(log: String?, throwable: Throwable?) {
+        logService.w(log, throwable)
+    }
+
+    override fun e(tag: String?, log: String?) {
+        logService.e(tag, log)
+    }
+
+    override fun e(tag: String?, log: String?, throwable: Throwable?) {
+        logService.e(tag, log, throwable)
+    }
+
+    override fun e(log: String?) {
+        logService.e(log)
+    }
+
+    override fun e(log: String?, throwable: Throwable?) {
+        logService.e(log, throwable)
+    }
+
+}
+
+object L : LogService {
+    private val logService by lazy {
+        requireService<LogService>() ?: SimpleLog
+    }
+
+    var pubCloudShipBookCfg: PubCloudShipBookCfg? = null
+
+    var pubCloudMixPanelCfg: PubCloudMixpanelCfg? = null
+
+    fun installPubCloudShipBook(appId: String, appKey: String) {
+        pubCloudShipBookCfg = PubCloudShipBookCfg(appId, appKey)
+    }
+
+    fun installPubCloudMixPanel(token: String) {
+        pubCloudMixPanelCfg = PubCloudMixpanelCfg(token)
     }
 
     override var fixedPrefixProvider: () -> String

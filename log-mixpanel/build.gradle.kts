@@ -5,11 +5,12 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
-    id("com.vanniktech.maven.publish") version "0.28.0"
+
+    id("com.vanniktech.maven.publish") version "0.32.0"
 }
 
 android {
-    namespace = "android.boot.slf.shipbook"
+    namespace = "android.boot.slf.mixpanel"
     compileSdk = 34
 
     defaultConfig {
@@ -29,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
@@ -44,10 +45,10 @@ dependencies {
     implementation(libs.material)
 
     implementation(libs.slf.api)
+//    implementation(project(":api"))
     kapt(libs.auto.service)
     implementation(libs.auto.service.annotations)
-    implementation(libs.shipbooksdk)
-
+    implementation(libs.mixpanel.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,10 +67,10 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-shipbook", "1.0.0-alpha2")
+    coordinates("io.github.zhangwenxue", "slf-mixpanel", "1.0.0")
 
     pom {
-        name.set("Slf-ShipBook")
+        name.set("Slf-Mixpanel")
         description.set("An Android simple log facade api")
         inceptionYear.set("2024")
         url.set("https://github.com/zhangwenxue/slf/")
