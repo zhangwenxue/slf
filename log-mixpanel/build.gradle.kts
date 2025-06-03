@@ -67,7 +67,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-mixpanel", "1.0.0")
+    coordinates("io.github.zhangwenxue", "slf-mixpanel", "1.0.1")
 
     pom {
         name.set("Slf-Mixpanel")

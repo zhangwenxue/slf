@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.material)
 
     implementation(libs.slf.api)
+//    implementation(project(":api"))
     kapt(libs.auto.service)
     implementation(libs.auto.service.annotations)
     implementation(libs.shipbooksdk)
@@ -66,7 +67,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-shipbook", "1.0.0-alpha3")
+    coordinates("io.github.zhangwenxue", "slf-shipbook", "1.0.1")
 
     pom {
         name.set("Slf-ShipBook")
