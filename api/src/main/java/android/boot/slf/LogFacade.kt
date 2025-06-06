@@ -95,15 +95,13 @@ object Logger : LogService {
     var pubCloudMixPanelCfg: PubCloudMixpanelCfg? = null
 
     @JvmStatic
-    fun installPubCloudShipBook(context: Context, appId: String, appKey: String) {
+    fun installPubCloudShipBook(appId: String, appKey: String) {
         pubCloudShipBookCfg = PubCloudShipBookCfg(appId, appKey)
-        init(context)
     }
 
     @JvmStatic
-    fun installPubCloudMixPanel(context: Context, token: String) {
+    fun installPubCloudMixPanel(token: String) {
         pubCloudMixPanelCfg = PubCloudMixpanelCfg(token)
-        init(context)
     }
 
 

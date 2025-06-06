@@ -62,7 +62,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-api", "1.0.3")
+    coordinates("io.github.zhangwenxue", "slf-api", "1.0.4")
 
     pom {
         name.set("Slf Api")

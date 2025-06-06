@@ -65,7 +65,12 @@ class ShipBookLog : LogService {
     }
 
     override fun trace(event: String, args: Map<String, String>) {
-        Log.i(event, args.entries.joinToString())
+        Log.i(
+            event, args.entries.joinToString(
+                separator = "\n",
+                transform = { "${it.key}:${it.value}" }
+            )
+        )
     }
 
 }

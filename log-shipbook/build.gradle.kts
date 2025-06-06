@@ -67,7 +67,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "slf-shipbook", "1.0.1")
+    coordinates("io.github.zhangwenxue", "slf-shipbook", "1.0.2")
 
     pom {
         name.set("Slf-ShipBook")
